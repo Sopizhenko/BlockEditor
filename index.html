@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <title>Block Editor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="panel top-panel">
+        <div class="left-actions">
+            <button id="undo" class="breakpoint-btn" disabled><i class="la la-undo"></i></button>
+            <button id="redo" class="breakpoint-btn" disabled><i class="la la-redo"></i></button>
+        </div>
+        <div class="center-actions">
+            <button id="mobile-view" class="breakpoint-btn"><i class="la la-mobile"></i></button>
+            <button id="tablet-view" class="breakpoint-btn"><i class="la la-tablet"></i></button>
+            <button id="desktop-view" class="breakpoint-btn"><i class="la la-desktop"></i></button>
+            <button id="large-desktop-view" class="breakpoint-btn"><i class="la la-tv"></i></button>
+            <button id="fit-screen-view" class="breakpoint-btn"><i class="la la-expand"></i></button>
+        </div>
+        <div class="right-actions">
+          <div class="edit-mode-toggler">
+            <span>Edit Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="edit-mode-toggle" checked>
+                <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+    </div>
+
+    <div class="editor-container">
+        <div class="panel block-type-panel">
+            <div class="block-type" draggable="true" data-block-type="text">Text Block</div>
+            <div class="block-type" draggable="true" data-block-type="banner">Banner Block</div>
+        </div>
+
+        <div class="editor">
+            <div id="block-container" class="block-container">
+                <!-- Blocks will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="panel block-options-panel" id="block-options-panel">
+            <div id="block-options-content">
+                <p>Select a block to see its options.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

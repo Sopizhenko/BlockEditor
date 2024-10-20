@@ -379,6 +379,12 @@ function setBreakpoint(breakpoint) {
     editor.classList.remove('mobile', 'tablet', 'desktop', 'large-desktop', 'fit-screen');
     editor.classList.add(breakpoint);
 
+    // add active class to the selected breakpoint
+    document.querySelectorAll('.breakpoint-btn').forEach((element) => {
+        element.classList.remove('active');
+    });
+    document.getElementById(`${breakpoint}-view`).classList.add('active');
+
     // Adjust block container width to center editor and make side panels fixed
     if (breakpoint === 'mobile') {
         editor.style.width = '375px';

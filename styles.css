@@ -70,7 +70,6 @@ body {
 .editor {
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     overflow-y: auto;
     width: 100%;
     margin: 0 auto;
@@ -239,4 +238,34 @@ input:checked + .slider:before {
     margin: 0 auto;
     width: 50%; /* Ensure the editor is centered and has a reasonable width */
     position: relative;
+}
+
+/* Left panel tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #2196F3;
+    color: #ffffff;
+    border-bottom: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }

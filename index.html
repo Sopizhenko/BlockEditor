@@ -35,8 +35,23 @@
 
     <div class="editor-container">
         <div class="panel block-type-panel">
-            <div class="block-type" draggable="true" data-block-type="text">Text Block</div>
-            <div class="block-type" draggable="true" data-block-type="banner">Banner Block</div>
+            <!-- Add tabs -->
+            <div class="tabs">
+                <button class="tab active" id="blocks-tab">Blocks</button>
+                <button class="tab" id="sections-tab">Sections</button>
+            </div>
+        
+            <!-- Block types panel -->
+            <div id="block-types" class="tab-content active">
+                <div class="block-type" draggable="true" data-block-type="text">Text Block</div>
+                <div class="block-type" draggable="true" data-block-type="banner">Banner Block</div>
+            </div>
+        
+            <!-- Sections panel (hidden initially) -->
+            <div id="section-types" class="tab-content">
+                <div class="section-type" draggable="true" data-section-type="header">Header Section</div>
+                <div class="section-type" draggable="true" data-section-type="footer">Footer Section</div>
+            </div>
         </div>
 
         <div class="editor">

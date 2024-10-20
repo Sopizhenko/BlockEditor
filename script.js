@@ -459,3 +459,23 @@ editModeToggle.addEventListener('change', (event) => {
         editorContainer.classList.add('edit-mode-disabled');
     }
 });
+
+// Tab switching logic
+const blocksTab = document.getElementById('blocks-tab');
+const sectionsTab = document.getElementById('sections-tab');
+const blockTypes = document.getElementById('block-types');
+const sectionTypes = document.getElementById('section-types');
+
+blocksTab.addEventListener('click', () => {
+    blocksTab.classList.add('active');
+    sectionsTab.classList.remove('active');
+    blockTypes.classList.add('active');
+    sectionTypes.classList.remove('active');
+});
+
+sectionsTab.addEventListener('click', () => {
+    sectionsTab.classList.add('active');
+    blocksTab.classList.remove('active');
+    sectionTypes.classList.add('active');
+    blockTypes.classList.remove('active');
+});
